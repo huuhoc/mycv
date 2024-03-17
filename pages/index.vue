@@ -129,8 +129,10 @@ const listCompany = [
     </Head>
   </Html>
   <TopContent />
-  <div class="py-7 flex space-x-10">
-    <div class="w-1/3 space-y-8">
+  <div class="py-7 flex flex-col md:flex-row md:space-x-10">
+    <div
+      class="w-full md:w-1/3 space-y-8 order-last md:order-first mt-6 md:mt-0"
+    >
       <CommonBlock titleBlock="Giới thiệu">
         <CommonCard class="space-y-3">
           <p>
@@ -161,7 +163,7 @@ const listCompany = [
         </CommonCard>
       </CommonBlock>
     </div>
-    <div class="w-2/3">
+    <div class="w-full md:w-2/3">
       <CommonBlock titleBlock="Kinh nghiệm làm việc">
         <CommonCompany
           v-for="company in listCompany"
@@ -169,6 +171,17 @@ const listCompany = [
           :company="company"
         />
       </CommonBlock>
+    </div>
+  </div>
+  <div
+    class="py-7 border-t border-white border-opacity-20 md:space-x-10 flex flex-col md:flex-row"
+  >
+    <div class="text-sm">Develop with Nuxt3 and Tailwind</div>
+    <div
+      class="text-sm flex-1 md:text-right order-first md:order-last mb-2 md:mb-0"
+    >
+      Cuối cùng, tôi muốn nói lời <strong>cảm ơn</strong> Bạn đã dành thời gian
+      xem xét CV của tôi.
     </div>
   </div>
 </template>
